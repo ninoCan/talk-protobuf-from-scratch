@@ -1,0 +1,21 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165.6648987962408 226.1902776573552" width="165.6648987962408" height="226.1902776573552">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/home/nino/.vscode/extensions/pomdtr.excalidraw-editor-3.7.4/public//dist/excalidraw-assets/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/home/nino/.vscode/extensions/pomdtr.excalidraw-editor-3.7.4/public//dist/excalidraw-assets/Cascadia.woff2");
+      }
+      @font-face {
+        font-family: "Assistant";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/home/nino/.vscode/extensions/pomdtr.excalidraw-editor-3.7.4/public//dist/excalidraw-assets/Assistant-Regular.woff2");
+      }
+    </style>
+    
+  </defs>
+  <g stroke-linecap="round"><g transform="translate(19.16900799619225 180.79384169802498) rotate(0 45.49999999999997 -84.65426741049373)"><path d="M1.17 0.3 C0.6 -19.21, -17.81 -88.24, -2.26 -116.42 C13.29 -144.59, 78.62 -159.75, 94.47 -168.75 M0.32 -0.6 C-0.43 -19.96, -18.43 -86.57, -2.82 -114.93 C12.78 -143.3, 78.07 -161.64, 93.96 -170.79" stroke="#ff80bf" stroke-width="4" fill="none"></path></g><g transform="translate(19.16900799619225 180.79384169802498) rotate(0 45.49999999999997 -84.65426741049373)"><path d="M72.12 -150.22 C81.12 -157.33, 89.07 -165.88, 93.96 -170.79 M72.12 -150.22 C79.05 -156.71, 88.41 -164.21, 93.96 -170.79" stroke="#ff80bf" stroke-width="4" fill="none"></path></g><g transform="translate(19.16900799619225 180.79384169802498) rotate(0 45.49999999999997 -84.65426741049373)"><path d="M64.01 -169.07 C76.31 -168.82, 87.46 -169.93, 93.96 -170.79 M64.01 -169.07 C73.57 -168.95, 85.75 -169.91, 93.96 -170.79" stroke="#ff80bf" stroke-width="4" fill="none"></path></g></g><mask></mask><g transform="translate(40.821148796240806 115.3902776573552) rotate(0 57.421875 50.400000000000006)"><text x="0" y="0" font-family="Cascadia, Segoe UI Emoji" font-size="28px" fill="#ff80bf" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge"></text><text x="0" y="33.6" font-family="Cascadia, Segoe UI Emoji" font-size="28px" fill="#ff80bf" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Testing</text><text x="0" y="67.2" font-family="Cascadia, Segoe UI Emoji" font-size="28px" fill="#ff80bf" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">in Prod</text></g></svg>
