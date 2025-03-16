@@ -30,6 +30,7 @@ If you have any feedback, please reach out to me!
 # Useful Reading
 
 
-- [Protobuf docs]()
+- [Protobuf docs](https://protobuf.dev/)
+- Linux Foundation free course: [Introduction to Protocol Buffers (LFS145)](https://training.linuxfoundation.org/training/introduction-to-protocol-buffers-lfs145/)
 
 
