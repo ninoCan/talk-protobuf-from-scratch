@@ -34,7 +34,11 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { 
+					[].forEach.call( document.querySelectorAll( '.highlight' ), function( v, i) {
+						hljs.highlightBlock(v);
+					});
+				} },
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
