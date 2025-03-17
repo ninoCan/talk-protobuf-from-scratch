@@ -347,74 +347,117 @@ message TelegramProfile {
 
 
 <div class="column">
-  <h2>Backward
-  / Forward <emph>Compatibility</emph></h2>
-div>
-
-<pre class="code-block" style="height: 450px">
+  <h2><span class="pink">Backward</span> /
+  <span class="cyan">forward  <emph>Compatibility</emph></h2></span>
+<!-- <span class="yellow">Question:</span>
+<p class="no-wrap">What if we want to change?</p> -->
+<pre class="code-block" style="margin-top: 40px">
   <code class="language-protobuf" data-noescape>message TelegramProfile {
   uint64 phone = 1;
   string user_name = 2;
-}
-  </code>
+}</code>
 </pre>
----
-
-# <em>CROSS-LANGUAGE</em>
-
----
-
-## <span class="green">protoc</span> to rule them all
-<img src="" style="rounded gif" />
-
----
-
-```
-class TestSuite:
-
-  func testCase {
-    # Arrange
-    under_test = greet
-    expected = "Hello, World!"
-
-    # Act
-    actual = under_test()
-
-    # Assert
-    assert actual == expected
+</div>
+<div class="column fragment">
+  <pre class="code-block" style="height: 420px; width: 550px;">
+    <code class="language-protobuf" data-noescape>message TelegramProfile {
+  // we reserve previous id
+  reserved 1;
+  // or even name
+  reserved "phone";<br>
+  // user_name is unchanged
+  string user_name = 2;<br>
+  oneof telephone {
+    // forward compatibility
+    optional uint32 numeric = 3;
+    optional string alphanumeric = 4;
   }
+}</code>
+  </pre>
+</div>
 
-```
+---
+
+<h2><span class="blue">services</span></h2>
+
+  <pre class="code-block" style="height: 400px; width: 900px;">
+    <code class="language-protobuf" data-noescape>message AddMemberRequest {
+  string channel_id = 1;
+  TelegramProfile = 2;
+}</br>
+message AddMemberResponse {
+    // Confirmation message
+    string message = 1;
+}<br>
+service ChannelService{
+   rpc AddMember(AddMemberRequest) returns (AddMemberResponse);
+}</code>
+</pre>
+
+---
+
+# <em class="blue">CROSS-LANGUAGE</em>
+<img class="rounded" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOG12dDJkNzh5cWo2d3U1cGNldjVteTR3YXoxZW1sZGFuM3NuZXMyOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1I2NwmjvSzNS0/giphy.gif" alt=""></img>
+## <span class="pink">protoc</span> to rule them all
+
+---
+
+<pre class="code-block" style="height: 500px; width: 900px;">
+  <code class="language-bash" data-noescape># Client generation
+$ protoc \
+    --proto_path="channel.proto" \
+    --python_out="./py-client"
+
+$ protoc \
+    --proto_path="channel.proto" \
+    --java_out="./java-client"
+
+# On-the-fly encoding:
+$ echo '''
+user_name: "nino"
+telephone: "+39 042 1234567"
+''' | protoc --encode=TelegramContanct telegram.proto > msg.bin<br>
+# On-the-fly decoding:
+$ cat msg.bin | protoc --decode=TelegramContanct telegram.proto</code>
+</pre>
+
+---
+
+## <span class="red">CAVEATS</span>
+<ul>
+  <li>Can be loaded into memory</li>
+  <li>Serialization might differ</li>
+  <li>No compression</li>
+  <li>❌ non-OOP languages</li>
+  <li>❌ multidimensional arrays of floats</li>
+</ul>
 
 ---
 
 # About Me
 
 <div class="column" style="margin-top: -90px;">
-<h3 style="margin-top: 130px">Anto"nino" Cangialosi</h3>
-Big Data Engineer<br/>
-<img style="width: 160px;" src="https://www.agilelab.it/hubfs/logo-agilelab.png">
-<br>
-<i class="fa fa-github fa-lg"> </i>
-<i class="fa fa-gitlab fa-lg"> </i>
+<h3 style="margin-top: 90px">
+  <span class="blue">Anto"nino" Cangialosi</span>
+</h3>
+<i class="fa fa-github fa-lg"></i>
+<i class="fa fa-gitlab fa-lg"></i>
 <i class="fa fa-slack fa-lg">ninoCan</i><br/>
 <i class="fa fa-linkedin">antonino-cangialosi</i>
 
 </div>
 
 <div class="column">
-<img style="width: 160px" src="https://images.credly.com/size/340x340/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png">
-<img style="width: 140px" src="https://images.credly.com/size/340x340/images/2d613ff8-8879-430b-b2d8-925fa29785e8/image.png">
-<img style="width: 130px" src="https://images.credly.com/size/340x340/images/f28f1d88-428a-47f6-95b5-7da1dd6c1000/KCNA_badge.png">
-<img style="width: 190px" src="https://www.datacamp.com/statement-of-accomplishment/badge/track/86369ef15d2722bc789beeb26e9a5f28c68558d7.png">
-<img style="width: 190px" src="https://www.datacamp.com/statement-of-accomplishment/badge/track/e265d97f60368099e8c955bf28b08b306f00a506.png">
+<span style="margin-top: 80px;">Big Data Engineer</span>
+<br/>
+<img class="rounded" style="background: var(--white); transform: scale(1.5); margin-top: 50px; padding: 40px" src="https://www.agilelab.it/hubfs/logo-agilelab.png">
 </div>
 
+<h2><span class="green">We are hiring!</span></h2>
 
 ---
 
 # Thank you!
-
 <ul class="repo small">
   <li class="no-wrap small">https://www.github.io/ninocan/talk-protobuf-from-scratch/</li>
 </ul>
