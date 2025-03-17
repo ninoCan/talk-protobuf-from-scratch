@@ -301,11 +301,11 @@ message TelegramProfile {
         uint64 phone = 1;
         string user_name = 2;
       }
-      <span class="fragment highlight" data-fragment-index="1"
+      <span class="fragment" data-fragment-index="1"
       >repeated TelegramProfile subscribers = 1;</span>
-      <span class="fragment highlight" data-fragment-index="2"
+      <span class="fragment" data-fragment-index="2"
       >map&lt;string, boolean&gt; settings = 2;</span>
-      <span class="fragment highlight" data-fragment-index="3"
+      <span class="fragment" data-fragment-index="3"
       >oneof profile_picture {
         string image_url = 3; // URL of the profile picture
         bytes image_data = 4; // Raw image data
