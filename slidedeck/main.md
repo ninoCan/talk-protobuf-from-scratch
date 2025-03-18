@@ -280,15 +280,18 @@ message TelegramProfile {
 
 ## <emph>Container types</emph>
 <div class="third-column">
-  <h3 class="fragment" data-fragment-index="1"> ARRAYS</h3>
+  <!-- <h3 class="fragment" data-fragment-index="1"> ARRAYS</h3> -->
+  <h3 > ARRAYS</h3>
 </div>
 <div class="third-column">
-  <h3 class="fragment" data-fragment-index="2">
+  <!-- <h3 class="fragment" data-fragment-index="2"> -->
+  <h3 >
     <span class="cyan">MAPS</span>
   </h3>
 </div>
 <div class="third-column">
-  <h3 class="fragment" data-fragment-index="3">
+  <!-- <h3 class="fragment" data-fragment-index="3"> -->
+  <h3 >
     <span class="green">SUM TYPES</span>
   </h3>
 </div>
