@@ -1,6 +1,6 @@
 [![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-# Talk "Testing Demystified: the Hard, the Boring, the Practical"
+# Talk "Protobuf from scratch: the API game-changer"
 
 This repo contains the slide-deck and related material to the talk
 delivered at:
@@ -15,10 +15,6 @@ https://ninocan.github.io/talk-protobuf-from-scratch
 **Draft:** Excalidraw
 
 **Slide-Deck:** RevealJS, Markdown, HTML &amp; CSS
-
-## Installation
-
-
 
 ## Authors
 
